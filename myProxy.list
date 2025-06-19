@@ -1,0 +1,33 @@
+# DOMAIN-SUFFIX：域名后缀匹配
+# DOMAIN：域名匹配
+# DOMAIN-KEYWORD：域名关键字匹配
+# IP-CIDR：IP 段匹配
+# SRC-IP-CIDR：源 IP 段匹配
+# GEOIP：GEOIP 数据库（国家代码）匹配
+# DST-PORT：目标端口匹配
+# SRC-PORT：源端口匹配
+# PROCESS-NAME：源进程名匹配
+# RULE-SET：Rule Provider 规则匹配
+# MATCH：全匹配
+
+# 谷歌
+# 谷歌搜索的体验对延迟比较敏感，所以走选择的代理
+#DOMAIN-SUFFIX,google.com
+
+# Steam
+# Steam 只有部分要走代理，比如steampowerd和steamcommunity，前者是商店，后者是社区，都是会被ban的。但也有部分绝对不能走代理，比如st.dl开头的这些，这些都是下载节点，一但开了，流量就会飞速流逝。
+#DOMAIN-SUFFIX,steampowered.com
+#DOMAIN-SUFFIX,steamcommunity.com
+
+# PikPak
+# 磁力离线工具
+# 相关直连位于 myDirect
+# 因为直连链接与登录链接采用同一后缀，所以不能去引号，不然会走代理
+#'DOMAIN-SUFFIX,mypikpak.com'
+#'DOMAIN-SUFFIX,mypikpak.net'
+#'DOMAIN-SUFFIX,user.mypikpak.com'
+#'DOMAIN-SUFFIX,access.mypikpak.com'
+
+# onedrive.live.com
+# OneDrive网页版
+#DOMAIN-SUFFIX,onedrive.live.com
